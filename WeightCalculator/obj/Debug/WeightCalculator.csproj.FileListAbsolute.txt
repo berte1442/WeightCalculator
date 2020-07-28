@@ -110,7 +110,6 @@ C:\Users\rchpi\source\repos\WeightCalculator\WeightCalculator\bin\Newtonsoft.Jso
 C:\Users\rchpi\source\repos\WeightCalculator\WeightCalculator\bin\Antlr3.Runtime.pdb
 C:\Users\rchpi\source\repos\WeightCalculator\WeightCalculator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\rchpi\source\repos\WeightCalculator\WeightCalculator\obj\Debug\WeightCalculator.csprojAssemblyReference.cache
-C:\Users\rchpi\source\repos\WeightCalculator\WeightCalculator\obj\Debug\WeightCalculator.csproj.CoreCompileInputs.cache
 C:\Users\rchpi\source\repos\WeightCalculator\WeightCalculator\obj\Debug\WeightCalculator.csproj.CopyComplete
 C:\Users\rchpi\source\repos\WeightCalculator\WeightCalculator\obj\Debug\WeightCalculator.dll
 C:\Users\rchpi\source\repos\WeightCalculator\WeightCalculator\obj\Debug\WeightCalculator.pdb
