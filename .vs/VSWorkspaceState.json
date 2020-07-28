@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WeightCalculator",
+    "\\WeightCalculator\\Controllers",
+    "\\WeightCalculator\\Views",
+    "\\WeightCalculator\\Views\\GrowthCalc",
+    "\\WeightCalculator\\Views\\Home",
+    "\\WeightCalculator\\Views\\Shared"
+  ],
+  "SelectedNode": "\\WeightCalculator.sln",
+  "PreviewInSolutionExplorer": false
+}
