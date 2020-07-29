@@ -75,7 +75,7 @@ function calc() {
     boyArray[5] = [weight6, height6]
     totalBoyArray.push(boyArray[5]);
    
-    var lenghPercentile;
+    var lengthPercentile;
     var weightPercentile;
 
     var weight = newBaby.weight;
@@ -115,6 +115,45 @@ function calc() {
         else if (arrayNum > 6) {
             weightPercentile = "Your baby is above the 95th percentile for weight."
         }
+
+        var length = newBaby.length;
+        var lengths = totalBoyArray[0][1];
+        var arrayNum2 = 7;
+        if (newBaby.age == 1) {
+            for (var i = 0; i < lengths.length; i++) {
+                if (length > lengths[i]) {
+                    continue;
+                }
+                else {
+                    arrayNum2 = i;
+                    break;
+                }
+            }
+            if (arrayNum2 == 0) {
+                lengthPercentile = "Your baby is below the 5th percentile for length.";
+            }
+            else if (arrayNum2 == 1) {
+                lengthPercentile = "Your baby is between the 5th and 10th percentile for length";
+            }
+            else if (arrayNum2 == 2) {
+                lengthPercentile = "Your baby is between the 10th and 25th percentile for length";
+            }
+            else if (arrayNum2 == 3) {
+                lengthPercentile = "Your baby is between the 25th and 50th percentile for length";
+            }
+            else if (arrayNum2 == 4) {
+                lengthPercentile = "Your baby is between the 50th and 75th percentile for length";
+            }
+            else if (arrayNum2 == 5) {
+                lengthPercentile = "Your baby is between the 75th and 90th percentile for length";
+            }
+            else if (arrayNum2 == 6) {
+                lengthPercentile = "Your baby is between the 90th and 95th percentile for length";
+            }
+            else if (arrayNum2 > 6) {
+                lengthPercentile = "Your baby is above the 95th percentile for length."
+            }
+        }
     }
 
     //console.log(lbs + oz + length + age + selectedGender);
@@ -127,4 +166,5 @@ function calc() {
     //console.log(newBaby);
     console.log(totalBoyArray[0][0]);
     console.log(weightPercentile);
-}1
+    console.log(lengthPercentile);
+}
