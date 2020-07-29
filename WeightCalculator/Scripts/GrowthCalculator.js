@@ -1,4 +1,77 @@
-﻿function createBaby(weight, length, age, gender) {
+﻿var boyArray = [];
+var totalBoyArray = [];
+//numbers in each dimension of array represent
+//5th, 10th, 25th, 50th, 75th, 90th, 95th percentiles
+
+//1 month old
+var weight1 = [7.5, 8, 9, 9.5, 10.5, 11.5, 12]          //weight
+var height1 = [19.75, 20.25, 21, 21.5, 22, 22.5, 23.5]; //height
+boyArray[0] = [weight1, height1];
+totalBoyArray.push(boyArray[0]);
+//2 month old
+var weight2 = [9, 9.5, 10.5, 11.5, 12.25, 13.5, 14]     //weight
+var height2 = [21.25, 21.75, 22.25, 23, 23.5, 24, 24.5];//height
+boyArray[1] = [weight2, height2];
+totalBoyArray.push(boyArray[1]);
+//3 month old
+var weight3 = [10.5, 11, 12, 13, 14.25, 15.5, 16.25]    //weight
+var height3 = [22.5, 23, 23.25, 24, 24.75, 25.25, 25, 5];//height
+boyArray[2] = [weight3, height3];
+totalBoyArray.push(boyArray[2]);
+//4 month old
+var weight4 = [12, 12.75, 13.5, 14.5, 15.75, 17.25, 19]       //weight
+var height4 = [23.25, 23.75, 24.25, 24.75, 25.5, 26.25, 26.5];//height
+boyArray[3] = [weight4, height4];
+totalBoyArray.push(boyArray[3]);
+//5 month old
+var weight5 = [13, 13.75, 14.5, 16, 17.5, 19, 20]    //weight
+var height5 = [24, 24.5, 25, 25.5, 26.25, 27, 27.25];//height
+boyArray[4] = [weight5, height5];
+totalBoyArray.push(boyArray[4]);
+//6 month old
+var weight6 = [14, 15, 15.75, 17.25, 19, 20.5, 21]       //weight
+var height6 = [24.75, 25.25, 25.75, 26.5, 27, 27.75, 28];//height
+boyArray[5] = [weight6, height6]
+totalBoyArray.push(boyArray[5]);
+
+
+var girlArray = [];
+var totalGirlArray = [];
+//numbers in each dimension of array represent
+//5th, 10th, 25th, 50th, 75th, 90th, 95th percentiles
+
+//1 month old
+var gWeight1 = [7, 7.5, 8.25, 9, 9.75, 10.75, 11.25]      //weight
+var gHeight1 = [19.5, 20, 20.5, 21, 21.75, 22.25, 22.75]; //height
+girlArray[0] = [gWeight1, gHeight1];
+totalGirlArray.push(girlArray[0]);
+//2 month old
+var gWeight2 = [8.25, 9, 9.75, 10.75, 11.5, 12.5, 13]  //weight
+var gHeight2 = [21, 21.25, 21.75, 22.25, 23, 23.5, 24];//height
+girlArray[1] = [gWeight2, gHeight2];
+totalGirlArray.push(girlArray[1]);
+//3 month old
+var gWeight3 = [9.5, 10, 11, 12, 13, 14, 14.75]           //weight
+var gHeight3 = [21.75, 22.25, 22.75, 23.25, 24, 24.5, 25];//height
+girlArray[2] = [gWeight3, gHeight3];
+totalGirlArray.push(girlArray[2]);
+//4 month old
+var gWeight4 = [11, 11.5, 12.5, 13.5, 14.5, 15.5, 16.25]   //weight
+var gHeight4 = [22.75, 23, 23.75, 24.25, 25, 25.25, 25.75];//height
+girlArray[3] = [gWeight4, gHeight4];
+totalGirlArray.push(girlArray[3]);
+//5 month old
+var gWeight5 = [12, 12.5, 13.5, 14.75, 16, 17, 17.5]        //weight
+var gHeight5 = [23.5, 23.75, 24.5, 25, 25.75, 26.25, 26.75];//height
+girlArray[4] = [gWeight5, gHeight5];
+totalGirlArray.push(girlArray[4]);
+//6 month old
+var gWeight6 = [13, 13.5, 14.75, 15.75, 17, 18.5, 19]       //weight
+var gHeight6 = [24, 24.5, 25, 25.75, 26.5, 27, 27.5];//height
+girlArray[5] = [gWeight6, gHeight6]
+totalGirlArray.push(girlArray[5]);
+
+function createBaby(weight, length, age, gender) {
     var newBaby = [];
     newBaby.weight = weight;
     newBaby.length = length;
@@ -39,76 +112,72 @@ function calc() {
 
     var newBaby = createBaby(totalLbs, height, months, selectedGender);
 
-    var boyArray = [];
-    var totalBoyArray = [];
-    //numbers in each dimension of array represent
-    //5th, 10th, 25th, 50th, 75th, 90th, 95th percentiles
-
-      //1 month old
-    var weight1 = [7.5, 8, 9, 9.5, 10.5, 11.5, 12]          //weight
-    var height1 = [19.75, 20.25, 21, 21.5, 22, 22.5, 23.5]; //height
-    boyArray[0] = [weight1, height1];
-    totalBoyArray.push(boyArray[0]);
-     //2 month old
-    var weight2 = [9, 9.5, 10.5, 11.5, 12.25, 13.5, 14]     //weight
-    var height2 = [21.25, 21.75, 22.25, 23, 23.5, 24, 24.5];//height
-    boyArray[1] = [weight2, height2];
-    totalBoyArray.push(boyArray[1]);
-      //3 month old
-    var weight3 = [10.5, 11, 12, 13, 14.25, 15.5, 16.25]    //weight
-    var height3 = [22.5, 23, 23.25, 24, 24.75, 25.25, 25, 5];//height
-    boyArray[2] = [weight3, height3];
-    totalBoyArray.push(boyArray[2]);
-      //4 month old
-    var weight4 = [12, 12.75, 13.5, 14.5, 15.75, 17.25, 19]       //weight
-    var height4 = [23.25, 23.75, 24.25, 24.75, 25.5, 26.25, 26.5];//height
-    boyArray[3] = [weight4, weight5];
-    totalBoyArray.push(boyArray[3]);
-      //5 month old
-    var weight5 = [13, 13.75, 14.5, 16, 17.5, 19, 20]    //weight
-    var height5 = [24, 24.5, 25, 25.5, 26.25, 27, 27.25];//height
-    boyArray[4] = [weight5, height5];
-    totalBoyArray.push(boyArray[4]);
-      //6 month old
-    var weight6 = [14, 15, 15.75, 17.25, 19, 20.5, 21]       //weight
-    var height6 = [24.75, 25.25, 25.75, 26.5, 27, 27.75, 28];//height
-    boyArray[5] = [weight6, height6]
-    totalBoyArray.push(boyArray[5]);
-   
     var lengthPercentile;
     var weightPercentile;
     var weights;
     var lengths;
 
-    if (newBaby.age == 1) {
-        weights = totalBoyArray[0][0];
-        lengths = totalBoyArray[0][1];
+    if (selectedGender == 'male') {
+        if (newBaby.age == 1) {
+            weights = totalBoyArray[0][0];
+            lengths = totalBoyArray[0][1];
+        }
+        else if (newBaby.age == 2) {
+            weights = totalBoyArray[1][0];
+            lengths = totalBoyArray[1][1];
+        }
+        else if (newBaby.age == 3) {
+            weights = totalBoyArray[2][0];
+            lengths = totalBoyArray[2][1];
+        }
+        else if (newBaby.age == 4) {
+            weights = totalBoyArray[3][0];
+            lengths = totalBoyArray[3][1];
+        }
+        else if (newBaby.age == 5) {
+            weights = totalBoyArray[4][0];
+            lengths = totalBoyArray[4][1];
+        }
+        else if (newBaby.age == 6) {
+            weights = totalBoyArray[5][0];
+            lengths = totalBoyArray[5][1];
+        }
+        else if (newBaby.age == 7) {
+            weights = totalBoyArray[6][0];
+            lengths = totalBoyArray[6][1];
+        }
     }
-    else if (newBaby.age == 2) {
-        weights = totalBoyArray[1][0];
-        lengths = totalBoyArray[1][1];
+    if (selectedGender == 'female') {
+        if (newBaby.age == 1) {
+            weights = totalGirlArray[0][0];
+            lengths = totalGirlArray[0][1];
+        }
+        else if (newBaby.age == 2) {
+            weights = totalGirlBoyArray[1][0];
+            lengths = totalGirlArray[1][1];
+        }
+        else if (newBaby.age == 3) {
+            weights = totalGirlArray[2][0];
+            lengths = totalGirlArray[2][1];
+        }
+        else if (newBaby.age == 4) {
+            weights = totalGirlArray[3][0];
+            lengths = totalGirlArray[3][1];
+        }
+        else if (newBaby.age == 5) {
+            weights = totalGirlArray[4][0];
+            lengths = totalGirlArray[4][1];
+        }
+        else if (newBaby.age == 6) {
+            weights = totalGirlArray[5][0];
+            lengths = totalGirlArray[5][1];
+        }
+        else if (newBaby.age == 7) {
+            weights = totalGirlArray[6][0];
+            lengths = totalGirlArray[6][1];
+        }
     }
-    else if (newBaby.age == 3) {
-        weights = totalBoyArray[2][0];
-        lengths = totalBoyArray[2][1];
-    }
-    else if (newBaby.age == 4) {
-        weights = totalBoyArray[3][0];
-        lengths = totalBoyArray[3][1];
-    }
-    else if (newBaby.age == 5) {
-        weights = totalBoyArray[4][0];
-        lengths = totalBoyArray[4][1];
-    }
-    else if (newBaby.age == 6) {
-        weights = totalBoyArray[5][0];
-        lengths = totalBoyArray[5][1];
-    }
-    else if (newBaby.age == 7) {
-        weights = totalBoyArray[6][0];
-        lengths = totalBoyArray[6][1];
-    }
-
+    
     var weight = newBaby.weight;
     var arrayNum = 7;
 
