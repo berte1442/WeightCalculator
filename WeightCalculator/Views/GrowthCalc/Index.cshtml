@@ -10,29 +10,41 @@
         the national growth percentile.
         (for testing purposes, as of now, calculator only goes to 6 months old)
     </h3>
-    <div>
-        <label for="weight">Enter your baby's weight.</label>
-        <form id="weight" name="weight">
-            <label for="lbs">lbs</label>
-            <input type="number" id="lbs" name="lbs" /><br />
-            <label for="ounces">oz</label>
-            <input type="number" id="ounces" name="ounces" /><br />
-        </form><br />
-        <form>
-            <label for="length">Enter your baby's length in inches.</label>
-            <input type="number" id="length" name="length" /><br />
-        </form><br />
-        <form>
-            <label for="age">Enter your baby's age in months.</label>
-            <input type="number" id="age" name="age" /><br />
-        </form><br />
-        <label fo="gender">Select your baby's gender.</label>
-        <form id="gender" name="gender">
-            <input type="radio" id="male" name="gender" value="male" />
-            <label for="male">Male</label><br />
-            <input type="radio" id="female" name="gender" value="female" />
-            <label for="female">Female</label><br />
-        </form><br />
-        <button class="btn btn-default" onclick="calc()">Calculate growth percentile &raquo;</button>
+    <div class="container">
+        <div class="col-md-6">
+            <label for="weight">Enter your baby's weight.</label>
+            <form id="weight" name="weight">
+                <label for="lbs">lbs</label>
+                <input type="number" id="lbs" name="lbs" /><br />
+                <label for="ounces">oz</label>
+                <input type="number" id="ounces" name="ounces" /><br />
+            </form><br />
+            <form>
+                <label for="length">Enter your baby's length in inches.</label>
+                <input type="number" id="length" name="length" /><br />
+            </form><br />
+            <form>
+                <label for="age">Enter your baby's age in months.</label>
+                <input type="number" id="age" name="age" /><br />
+            </form><br />
+            <label fo="gender">Select your baby's gender.</label>
+            <form id="gender" name="gender">
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Male</label><br />
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Female</label><br />
+            </form><br />
+            <button class="btn btn-default" onclick="calc()">Calculate growth percentile &raquo;</button>
+        </div>
+        <div class="container">
+            <div class="col-md-6">
+
+            </div>
+            <div class="col-md-6">
+                <p id="weightResult"></p><br />
+                <p id="lengthResult"></p><br />
+                <a hreh="#" id="growthChart" target="_blank"></a>                
+            </div>
+        </div>
     </div>
 </div>

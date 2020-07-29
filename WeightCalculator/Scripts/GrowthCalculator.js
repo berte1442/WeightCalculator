@@ -153,7 +153,7 @@ function calc() {
             lengths = totalGirlArray[0][1];
         }
         else if (newBaby.age == 2) {
-            weights = totalGirlBoyArray[1][0];
+            weights = totalGirlArray[1][0];
             lengths = totalGirlArray[1][1];
         }
         else if (newBaby.age == 3) {
@@ -252,15 +252,20 @@ function calc() {
     else if (arrayNum2 > 6) {
         lengthPercentile = "Your baby is above the 95th percentile for length."
     }
+
+    document.getElementById('weightResult').innerHTML = weightPercentile;
+    document.getElementById('lengthResult').innerHTML = lengthPercentile;
+
+    if (selectedGender == 'female') {
+        document.getElementById('growthChart').href = "https://www.cdc.gov/nccdphp/dnpao/growthcharts/who/examples/example2_pop_cdc.htm";
+        document.getElementById('growthChart').innerHTML = "Click here to see girl growth chart.";
+    }
+    else if (selectedGender == 'male') {
+        document.getElementById('growthChart').href = "https://www.cdc.gov/nccdphp/dnpao/growthcharts/who/examples/example5_pop_cdc.htm";
+        document.getElementById('growthChart').innerHTML = "Click here to see boy growth chart.";
+    }
+
        
-    //console.log(lbs + oz + length + age + selectedGender);
-    //console.log(pounds);
-    //console.log(ounces);
-    //console.log(height);
-    //console.log(months);
-    //console.log(conOzToLbs);
-    //console.log(totalLbs);
-    //console.log(newBaby);
     console.log(weights);
     console.log(lengths);
     console.log(weightPercentile);
