@@ -77,85 +77,113 @@ function calc() {
    
     var lengthPercentile;
     var weightPercentile;
+    var weights;
+    var lengths;
 
-    var weight = newBaby.weight;
-    var weights = totalBoyArray[0][0];
-    var arrayNum = 7;
     if (newBaby.age == 1) {
-        for (var i = 0; i < weights.length; i++) {
-            if (weight > weights[i]) {
-                continue;
-            }
-            else {
-                arrayNum = i;
-                break;
-            }
-        }
-        if (arrayNum == 0) {
-            weightPercentile = "Your baby is below the 5th percentile for weight.";
-        }
-        else if (arrayNum == 1) {
-            weightPercentile = "Your baby is between the 5th and 10th percentile for weight";
-        }
-        else if (arrayNum == 2) {
-            weightPercentile = "Your baby is between the 10th and 25th percentile for weight";
-        }
-        else if (arrayNum == 3) {
-            weightPercentile = "Your baby is between the 25th and 50th percentile for weight";
-        }
-        else if (arrayNum == 4) {
-            weightPercentile = "Your baby is between the 50th and 75th percentile for weight";
-        }
-        else if (arrayNum == 5) {
-            weightPercentile = "Your baby is between the 75th and 90th percentile for weight";
-        }
-        else if (arrayNum == 6) {
-            weightPercentile = "Your baby is between the 90th and 95th percentile for weight";
-        }
-        else if (arrayNum > 6) {
-            weightPercentile = "Your baby is above the 95th percentile for weight."
-        }
-
-        var length = newBaby.length;
-        var lengths = totalBoyArray[0][1];
-        var arrayNum2 = 7;
-        if (newBaby.age == 1) {
-            for (var i = 0; i < lengths.length; i++) {
-                if (length > lengths[i]) {
-                    continue;
-                }
-                else {
-                    arrayNum2 = i;
-                    break;
-                }
-            }
-            if (arrayNum2 == 0) {
-                lengthPercentile = "Your baby is below the 5th percentile for length.";
-            }
-            else if (arrayNum2 == 1) {
-                lengthPercentile = "Your baby is between the 5th and 10th percentile for length";
-            }
-            else if (arrayNum2 == 2) {
-                lengthPercentile = "Your baby is between the 10th and 25th percentile for length";
-            }
-            else if (arrayNum2 == 3) {
-                lengthPercentile = "Your baby is between the 25th and 50th percentile for length";
-            }
-            else if (arrayNum2 == 4) {
-                lengthPercentile = "Your baby is between the 50th and 75th percentile for length";
-            }
-            else if (arrayNum2 == 5) {
-                lengthPercentile = "Your baby is between the 75th and 90th percentile for length";
-            }
-            else if (arrayNum2 == 6) {
-                lengthPercentile = "Your baby is between the 90th and 95th percentile for length";
-            }
-            else if (arrayNum2 > 6) {
-                lengthPercentile = "Your baby is above the 95th percentile for length."
-            }
-        }
+        weights = totalBoyArray[0][0];
+        lengths = totalBoyArray[0][1];
+    }
+    else if (newBaby.age == 2) {
+        weights = totalBoyArray[1][0];
+        lengths = totalBoyArray[1][1];
+    }
+    else if (newBaby.age == 3) {
+        weights = totalBoyArray[2][0];
+        lengths = totalBoyArray[2][1];
+    }
+    else if (newBaby.age == 4) {
+        weights = totalBoyArray[3][0];
+        lengths = totalBoyArray[3][1];
+    }
+    else if (newBaby.age == 5) {
+        weights = totalBoyArray[4][0];
+        lengths = totalBoyArray[4][1];
+    }
+    else if (newBaby.age == 6) {
+        weights = totalBoyArray[5][0];
+        lengths = totalBoyArray[5][1];
+    }
+    else if (newBaby.age == 7) {
+        weights = totalBoyArray[6][0];
+        lengths = totalBoyArray[6][1];
     }
 
+    var weight = newBaby.weight;
+    var arrayNum = 7;
+
+    for (var i = 0; i < weights.length; i++) {
+        if (weight > weights[i]) {
+            continue;
+        }
+        else {
+            arrayNum = i;      
+            break;
+        }
+    }
+    
+    if (arrayNum == 0) {
+        weightPercentile = "Your baby is below the 5th percentile for weight.";
+    }
+    else if (arrayNum == 1) {
+        weightPercentile = "Your baby is between the 5th and 10th percentile for weight";
+    }
+    else if (arrayNum == 2) {
+        weightPercentile = "Your baby is between the 10th and 25th percentile for weight";
+    }
+    else if (arrayNum == 3) {
+        weightPercentile = "Your baby is between the 25th and 50th percentile for weight";
+    }
+    else if (arrayNum == 4) {
+        weightPercentile = "Your baby is between the 50th and 75th percentile for weight";
+    }
+    else if (arrayNum == 5) {
+        weightPercentile = "Your baby is between the 75th and 90th percentile for weight";
+    }
+    else if (arrayNum == 6) {
+        weightPercentile = "Your baby is between the 90th and 95th percentile for weight";
+    }
+    else if (arrayNum > 6) {
+        weightPercentile = "Your baby is above the 95th percentile for weight."
+    }
+
+    var length = newBaby.length;
+    var arrayNum2 = 7;
+
+    for (var i = 0; i < lengths.length; i++) {
+        if (length > lengths[i]) {
+            continue;
+        }
+        else {
+            arrayNum2 = i;
+            break;
+        }
+    }
+    if (arrayNum2 == 0) {
+        lengthPercentile = "Your baby is below the 5th percentile for length.";
+    }
+    else if (arrayNum2 == 1) {
+        lengthPercentile = "Your baby is between the 5th and 10th percentile for length";
+    }
+    else if (arrayNum2 == 2) {
+        lengthPercentile = "Your baby is between the 10th and 25th percentile for length";
+    }
+    else if (arrayNum2 == 3) {
+        lengthPercentile = "Your baby is between the 25th and 50th percentile for length";
+    }
+    else if (arrayNum2 == 4) {
+        lengthPercentile = "Your baby is between the 50th and 75th percentile for length";
+    }
+    else if (arrayNum2 == 5) {
+        lengthPercentile = "Your baby is between the 75th and 90th percentile for length";
+    }
+    else if (arrayNum2 == 6) {
+        lengthPercentile = "Your baby is between the 90th and 95th percentile for length";
+    }
+    else if (arrayNum2 > 6) {
+        lengthPercentile = "Your baby is above the 95th percentile for length."
+    }
+       
     //console.log(lbs + oz + length + age + selectedGender);
     //console.log(pounds);
     //console.log(ounces);
@@ -164,7 +192,8 @@ function calc() {
     //console.log(conOzToLbs);
     //console.log(totalLbs);
     //console.log(newBaby);
-    console.log(totalBoyArray[0][0]);
+    console.log(weights);
+    console.log(lengths);
     console.log(weightPercentile);
     console.log(lengthPercentile);
 }
